@@ -1,7 +1,23 @@
 # PicoDet-Layout-detection
-Layout detection model . Use PP-PicoDet-LCNet1.0x
 
 训练参数设置文件： 训练配置文件/picodet_lcnet_x1_0_layout.yml
+
+已训练完成模型下载：https://pan.baidu.com/s/19d1wM_-kzZuVaQ-QStQplQ?pwd=1234 
+
+paddel 模型位于 model_20_optim/
+
+onnx 模型位于 onnx_infer/
+
+待预测图片位于 test_img/
+
+预测结果位于 test_result/
+
+运行run_paddel_infer.bat 进行预测
+
+或者运行命令进行预测：
+```python
+!python deploy/infer.py --model_dir=model_20_optim/ --image_dir=test_img/ --output_dir=test_result/ --device=GPU --batch_size=1 --cpu_threads=1 --threshold=0.5 
+```
 
 ## 1. 环境配置
 
